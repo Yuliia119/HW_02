@@ -6,6 +6,7 @@ public class Tarakan implements Runnable {
     private int steps;
     private Random random = new Random();
     private static volatile boolean winnerFound = false; // только один победитель
+    private static int winnerNumber = -1;
 
     public Tarakan(int number, int steps) {
         this.number = number;
@@ -26,8 +27,11 @@ public class Tarakan implements Runnable {
         }
         if (!winnerFound) {
             winnerFound = true;
-            System.out.println("Congratulations to Tarakan #" + number + " (winner)!");
+            winnerNumber = number;
         }
-        System.out.println(number + " Tarakan finished");
+        System.out.println("Tarakan " + number +  " finished");
+    }
+    public static int getWinnerNumber(){
+        return winnerNumber;
     }
 }

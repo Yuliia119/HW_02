@@ -24,6 +24,7 @@ public class TarakanRaceApp {
             }
         }
         System.out.println("The race is over!");
+        System.out.println("Congratulations to Tarakan #" + Tarakan.getWinnerNumber() + " (winner)!");
         scanner.close();
 
     }
